@@ -1,7 +1,7 @@
-# vqa-metric-analysis
-Analysis tool for evaluating VQA tasks
+# Vqa-metric-analysis
+Analysis tool for evaluating VQA Datasets
 
-The script divides validation data of VQA2.0 into 2 subsets easy and difficult samples based on subjectivity of each sample. 
+The repository contains code of our accepted NAACL paper titled "EaSe: A Diagnostic Tool for VQA based on Answer Diversity".
 
 ## Prerequisites
 
@@ -17,12 +17,15 @@ The script divides validation data of VQA2.0 into 2 subsets easy and difficult s
 ## Model used for evaluating VQA samples
 
 - Bottom-Up and Top-Down Attention for Visual Question Answering (https://github.com/hengyuan-hu/bottom-up-attention-vqa)
+- LXMERT (https://github.com/airsplay/lxmert)
 
 ## Steps to run this repository
 
 - python main.py 
-This will create two subsets of original validation question ids into easy and difficult question ids.
+
+This will create subsets of original validation question ids into easy and difficult question ids.
 
 - python compute_accuracies.py
-This will compute accuracies of the two subsets namely easy samples and hard samples. Here, the file pred_scores.json is created using model BUTD model (https://github.com/hengyuan-hu/bottom-up-attention-vqa). 
+
+This will compute accuracies of the subsets. Here, the file prediction file is created using VQA models.
 
